@@ -17,7 +17,7 @@ protected:
 		size_t pri; // Node priority, lower value = higher priority
 		size_t seq; // Node sequence number
 		bool operator< (const Node& n) // is less = is lower priority
-			{ return pri < n.pri || (pri == n.pri && n.seq < seq); }
+			{ return n.pri < pri || (pri == n.pri && n.seq < seq); }
 	};
 
 	Node entries[CAPACITY]; // Queue entries
