@@ -17,6 +17,7 @@ int main() {
 	queue.enqueue("turtle", 60);
 	queue.enqueue("chicken", 40);
 	queue.enqueue("duck", 40);
+	// queue.set_priority(1, 100);
 	print(queue);
 
 	while (queue.size()) {

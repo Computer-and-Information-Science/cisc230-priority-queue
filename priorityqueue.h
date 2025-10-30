@@ -50,6 +50,8 @@ public:
 
 	// Return number of entries in queue
 	size_t size() const { return entry_count; }
+
+	// void set_priority (size_t seq, size_t pri);
 };
 
 template <typename T>
@@ -117,6 +119,25 @@ void PriorityQueue<T>::push_up (size_t idx) {
 		}
 	}
 }
+
+// template <typename T>
+// void PriorityQueue<T>::set_priority (size_t seq, size_t pri) {
+// 	size_t i = 0;
+// 	while (i < entry_count && entries[i].seq != seq)
+// 		i++;
+
+// 	if (i == entry_count)
+// 		return; // entry not found
+
+// 	if (pri < entries[i].pri) {
+// 		entries[i].pri = pri;
+// 		push_up(i);
+// 	}
+// 	else if (pri > entries[i].pri) {
+// 		entries[i].pri = pri;
+// 		push_down(i);
+// 	}
+// }
 
 template <typename T>
 std::list<std::pair<size_t, T> > PriorityQueue<T>::list() const {
